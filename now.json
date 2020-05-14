@@ -8,6 +8,13 @@
     ],
     "routes": [
         {
+            "src": "/cerveceria/*",
+            "dest": "/app.js",
+            "methods": [
+                "DELETE"
+            ]
+        },
+        {
             "src": "/cervecerias",
             "dest": "/app.js",
             "methods": [
@@ -19,13 +26,6 @@
             "dest": "/app.js",
             "methods": [
                 "POST"
-            ]
-        },
-        {
-            "src": "/cerveceria/(.*)",
-            "dest": "/app.js/$1",
-            "methods": [
-                "DELETE"
             ]
         },
         {
