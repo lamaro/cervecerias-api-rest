@@ -22,7 +22,7 @@
             ]
         },
         {
-            "src": "/cervecerias",
+            "src": "/cervecerias/:id",
             "dest": "/app.js",
             "methods": [
                 "DELETE"
