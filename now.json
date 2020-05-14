@@ -22,7 +22,7 @@
             ]
         },
         {
-            "src": "/cervecerias/:id",
+            "src": "/cervecerias/",
             "dest": "/app.js",
             "methods": [
                 "DELETE"
@@ -35,5 +35,8 @@
                 "GET"
             ]
         }
-    ]
+    ],
+    "rewrites": [
+        { "source": "/cervecerias/:id", "destination": "/cervecerias" }
+      ]
 }
