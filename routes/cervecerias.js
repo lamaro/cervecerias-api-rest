@@ -34,6 +34,26 @@ const crudCervecerias = (app) => {
         res.send(cerveceria);
     };
 
+    //PUT - Update a register already exists in the DB
+    modificarCerveceria = function (req, res) {
+        Cerveceria.findById(req.params.id, function (err, cerveceria) {
+            cerveceria.id = req.body.id;
+            cerveceria.lat = req.body.lat;
+            cerveceria.lng = req.body.lng;
+            cerveceria.name = req.body.name;
+            cerveceria.description = req.body.description;
+            cerveceria.type = req.body.type;
+            cerveceria.save(function (err) {
+                if (!err) {
+                    console.log('Updated');
+                } else {
+                    console.log('ERROR: ' + err);
+                }
+                res.send(cerveceria);
+            });
+        });
+    }
+
     //DELETE - Delete a register with specified ID
     deleteCerveceria = function (req, res) {
         Cerveceria.findById(req.params.id, function (err, cerveceria) {
@@ -51,6 +71,7 @@ const crudCervecerias = (app) => {
     //URLS
     app.get('/cervecerias', findAllCervecerias);
     app.post('/cervecerias', addCerveceria);
+    app.put('/cerveceria/:id', modificarCerveceria);
     app.delete('/cerveceria/:id', deleteCerveceria);
 }
 
