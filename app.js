@@ -23,7 +23,7 @@ app.use(cors())
 routes = require('./routes/cervecerias')(app);
 
 app.get('/', function(req, res){
-    res.send("Welcome to the machine");
+    res.send("Welcome to the quarantine");
 });
 
 server.listen(process.env.PORT || 3000, function(){
