@@ -34,9 +34,24 @@ const crudCervecerias = (app) => {
         res.send(cerveceria);
     };
 
+    //DELETE - Delete a register with specified ID
+    deleteCerveceria = function (req, res) {
+        Cerveceria.findById(req.params.id, function (err, cerveceria) {
+            cerveceria.remove(function (err) {
+                if (!err) {
+                    console.log('Removed');
+                } else {
+                    console.log('ERROR: ' + err);
+                }
+                res.send(cerveceria);
+            })
+        });
+    }
+
     //URLS
     app.get('/cervecerias', findAllCervecerias);
     app.post('/cervecerias', addCerveceria);
+    app.delete('/cervecerias/:id', deleteCerveceria);
 }
 
 module.exports = crudCervecerias;
