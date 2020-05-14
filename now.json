@@ -38,5 +38,6 @@
     ],
     "rewrites": [
         { "source": "/cervecerias/:id", "destination": "/cervecerias" }
+        
       ]
 }
