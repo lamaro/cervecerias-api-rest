@@ -15,6 +15,13 @@
             ]
         },
         {
+            "src": "/cerveceria/(?<id>[^/]+)",
+            "dest": "/app.js/?id=$id",
+            "methods": [
+                "PUT"
+            ]
+        },
+        {
             "src": "/cervecerias",
             "dest": "/app.js",
             "methods": [
