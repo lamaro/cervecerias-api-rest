@@ -23,7 +23,7 @@
         },
         {
             "src": "/cerveceria/(.*)",
-            "dest": "/app.js",
+            "dest": "/app.js/$1",
             "methods": [
                 "DELETE"
             ]
