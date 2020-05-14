@@ -51,7 +51,7 @@ const crudCervecerias = (app) => {
     //URLS
     app.get('/cervecerias', findAllCervecerias);
     app.post('/cervecerias', addCerveceria);
-    app.delete('/cervecerias/:id', deleteCerveceria);
+    app.delete('/cerveceria/:id', deleteCerveceria);
 }
 
 module.exports = crudCervecerias;
