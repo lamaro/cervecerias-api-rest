@@ -9,7 +9,7 @@
     "routes": [
         {
             "src": "/cerveceria/(?<id>[^/]+)",
-            "dest": "/app.js/$id",
+            "dest": "/app.js/?id=$id",
             "methods": [
                 "DELETE"
             ]
