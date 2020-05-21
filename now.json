@@ -1,20 +1,9 @@
 {
     "version": 2,
-    "builds":[
+    "builds": [
         {
             "src": "app.js",
             "use": "@now/node-server"
-        }
-    ],
-    "headers": [
-        {
-            "source": "/(.*)",
-            "headers": [
-                {
-                    "key": "access-control-allow-origin",
-                    "value": "*"
-                }
-            ]
         }
     ],
     "routes": [
@@ -37,6 +26,12 @@
             "dest": "/app.js",
             "methods": [
                 "GET"
+            ],
+            "headers": [
+                {
+                    "key": "access-control-allow-origin",
+                    "value": "*"
+                }
             ]
         },
         {
