@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(methodOverride());
 var cors = require('cors')
 
-app.use(cors())
+//app.use(cors())
 app.options('*', cors()) // include before other routes
 routes = require('./routes/cervecerias')(app);
 
