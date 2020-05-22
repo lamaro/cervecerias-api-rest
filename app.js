@@ -18,7 +18,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(methodOverride());
 var cors = require('cors')
-app.use(cors())
+
+var corsOptions = {
+    origin: '*'
+  }
+app.use(cors(corsOptions))
 
 routes = require('./routes/cervecerias')(app);
 
