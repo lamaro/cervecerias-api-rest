@@ -17,7 +17,6 @@ const crudCervecerias = (app) => {
         console.log('POST');
         console.log(req.body);
         var cerveceria = new Cerveceria({
-            id: req.body.id,
             lat: req.body.lat,
             lng: req.body.lng,
             name: req.body.name,
@@ -37,7 +36,6 @@ const crudCervecerias = (app) => {
     //PUT - Update a register already exists in the DB
     modificarCerveceria = function (req, res) {
         Cerveceria.findById(req.params.id, function (err, cerveceria) {
-            cerveceria.id = req.body.id;
             cerveceria.lat = req.body.lat;
             cerveceria.lng = req.body.lng;
             cerveceria.name = req.body.name;
