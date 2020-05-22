@@ -19,10 +19,7 @@ app.use(bodyParser.json());
 app.use(methodOverride());
 var cors = require('cors')
 
-var corsOptions = {
-    origin: '*'
-  }
-app.use(cors(corsOptions))
+app.use(cors())
 
 routes = require('./routes/cervecerias')(app);
 
