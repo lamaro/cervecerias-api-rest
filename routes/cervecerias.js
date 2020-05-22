@@ -25,7 +25,7 @@ const crudCervecerias = (app) => {
         });
         cerveceria.save(function (err) {
             if (!err) {
-                console.log('Created');
+                console.log('Created',req.body);
             } else {
                 console.log('ERROR: ' + err);
             }
@@ -43,7 +43,7 @@ const crudCervecerias = (app) => {
             cerveceria.type = req.body.type;
             cerveceria.save(function (err) {
                 if (!err) {
-                    console.log('Updated');
+                    console.log('Updated',req.body);
                 } else {
                     console.log('ERROR: ' + err);
                 }
@@ -57,7 +57,7 @@ const crudCervecerias = (app) => {
         Cerveceria.findById(req.params.id, function (err, cerveceria) {
             cerveceria.remove(function (err) {
                 if (!err) {
-                    console.log('Removed');
+                    console.log('Removed',req.body);
                 } else {
                     console.log('ERROR: ' + err);
                 }
